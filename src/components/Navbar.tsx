@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 
+import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/solid";
+
 export default function Navbar() {
     const [navbar, setNavbar] = useState(false);
 
@@ -12,6 +14,15 @@ export default function Navbar() {
                 <Link href="/" className="text-2xl font-bold p-2">
                     Leadership Launchpad
                 </Link>
+
+                <div className="flex justify-center items-center px-2">
+                    <button onClick={() => setNavbar(!navbar)} className="w-10 h-10 md:hidden">
+                        {
+                            navbar ? (<XMarkIcon />) : (<Bars3Icon />)
+                        }
+                    </button>
+                </div>
+
             </div>
             
 
@@ -31,15 +42,11 @@ export default function Navbar() {
                         </Link>
                     </li>
                     <li className="text-xl py-3 px-5 text-center hover:bg-blue-100 hover:text-gray-800">
-                        <Link href="#projects" onClick={() => setNavbar(!navbar)}>
-                            Projects
+                        <Link href="#programs" onClick={() => setNavbar(!navbar)}>
+                            Our Programs
                         </Link>
                     </li>
-                    <li className="text-xl py-3 px-5 text-center hover:bg-blue-100 hover:text-gray-800">
-                        <Link href="/Abhiram_Rishi_Prattipati.pdf" onClick={() => setNavbar(!navbar)}>
-                            Resume
-                        </Link>
-                    </li>
+
                     <li className="text-xl py-3 px-5 text-center hover:bg-blue-100 hover:text-gray-800">
                         <Link href="#contact" onClick={() => setNavbar(!navbar)}>
                             Contact
