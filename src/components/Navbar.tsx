@@ -37,13 +37,19 @@ export default function Navbar() {
 
                     </li>
                     <li className="text-xl py-3 px-5 text-center hover:bg-blue-100 hover:text-gray-800">
-                        <Link href="#about" onClick={() => setNavbar(!navbar)}>
+                        <Link href="/about" onClick={() => setNavbar(!navbar)}>
                             About
                         </Link>
                     </li>
                     <li className="text-xl py-3 px-5 text-center hover:bg-blue-100 hover:text-gray-800">
                         <Link href="#programs" onClick={() => setNavbar(!navbar)}>
                             Our Programs
+                        </Link>
+                    </li>
+
+                    <li className="text-xl py-3 px-5 text-center hover:bg-blue-100 hover:text-gray-800">
+                        <Link href="#programs" onClick={() => setNavbar(!navbar)}>
+                            Join Us
                         </Link>
                     </li>
 
