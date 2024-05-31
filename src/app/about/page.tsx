@@ -1,7 +1,9 @@
+import Wallpaper from "@/components/Wallpaper";
+
 export default function About() {
     return (
         <div>
-            <h1>About</h1>
+            <Wallpaper />
         </div>
     )
 }
