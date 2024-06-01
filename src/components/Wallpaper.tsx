@@ -4,6 +4,7 @@ export default function Wallpaper() {
     return(
         <div className="w-full h-8-">
             <Image src="/images/forest.jpg" width={4000} height={900} alt="forest" />
+            <h1>Heading</h1>
 
         </div>
     )
